@@ -105,7 +105,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or feedback, please contact us at [email@example.com](mailto:your-email@example.com).
+For any inquiries or feedback, please contact us at [email@example.com](mailto:your-mridulmkumar07@gmail.com).
 ```
 
 Feel free to adjust any details or add additional sections as needed!
