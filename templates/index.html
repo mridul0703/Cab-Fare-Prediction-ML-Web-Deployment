@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background-color: #ececec;
+    color: black;
+    padding: 20px 0;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    padding-right: 40px; /* Add padding to the right of "Cara" text */
+}
+
+
+.logo a.cara-link {
+    font-family: cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px; /* Make the border radius half of the height */
+    background-color: transparent;
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #888; /* Change background color on hover */
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.right-section a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Make the border radius half of the height */
+    background-color: black;
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+.right-section a.login-btn {
+    background-color: #fff;
+    color: #000;
+}
+
+.right-section a.login-btn:hover {
+    background-color: #ccc; /* Change background color on hover */
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mid-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 80%;
+    
+}
+
+.left-side, .right-side {
+    width: 40%; /* Set width for left and right sides */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.map-container, .form-container {
+    padding: 20px; /* Add padding inside each container */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.map {
+    height: 500px; /* Set height for the map */
+    border-radius: 10px;
+}
+.form-container {
+    padding-top: 70px;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cabfarewidth {
+    width: calc(100% - 35px);
+}
+
+.form-container input[type="datetime-local"],
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    width: calc(100% - 100px); /* Set width to 100% minus padding */
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif; /* Use a fallback font */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #666; /* Placeholder text color */
+    border-radius: 10px;
+}
+
+.form-container input[type="datetime-local"]::placeholder,
+.form-container input[type="text"]::placeholder,
+.form-container input[type="number"]::placeholder,
+.form-container select::placeholder {
+    font-family: "Uber Move", Arial, sans-serif; /* Use Uber Move font */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #bdbdbd; /* Placeholder text color */
+    border-radius: 10px;
+}
+
+#fare {
+    width: calc(100% - 300px);
+    height: 50px; /* Increased height for better visibility */
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    color: black;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 50px; /* Vertically center the text */
+    transition: border-color 0.3s ease;
+}
+
+#fare:hover {
+    border-color: #999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#fare::placeholder {
+    color: #bdbdbd;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="left-section">
+          <div class="logo">
+            <a href="#" class="cara-link">Cara</a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">Rides</a></li>
+              <li><a href="#">Drive</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="right-section">
+          <a href="#" class="login-btn">Login</a>
+          <a href="#">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="mid-area">
+      <div class="left-side">
+        <div class="map-container">
+          <div id="map" class="map"></div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="form-container">
+          <form action="/predict" method="post">
+              <input type="text" id="pickup_longitude" name="pickup_longitude" placeholder="Pickup Longitude:" required><br>
+              <input type="text" id="pickup_latitude" name="pickup_latitude" placeholder="Pickup Latitude:" required><br>
+              <input type="text" id="dropoff_longitude" name="dropoff_longitude" placeholder="Dropoff Longitude:" required><br>
+              <input type="text" id="dropoff_latitude" name="dropoff_latitude" placeholder="Dropoff Latitude:" required><br>
+              <input type="datetime-local" id="pickup_datetime" name="pickup_datetime" placeholder="Pickup Date Time:" required><br>
+              <input type="number" id="passenger_count" name="passenger_count" min="1" placeholder="Passenger Count:" required><br>
+              <select id="model_type" name="model_type" placeholder="Chose Model">
+                  <option value="linear">Linear Regression</option>
+                  <option value="linear_svr">Linear SVR</option>
+                  <option value="bagging">Bagging Regressor</option>
+                  <option value="random_forest">Random Forest</option>
+                  <option value="decision_tree">Decision Tree</option>
+                  <option value="neural_network">Neural Network</option>
+                  <option value="hist_gradient_boosting">Histogram Gradient Boosting</option>
+                  <option value="voting">Voting Regressor</option>
+                  <option value="xgboost">XGBoost</option>
+              </select><br>
+              <button type="submit" class="btn">Predict Fare</button>
+              <input type="text" id="fare" name="fare" placeholder="Cab Fare:" value="{{ fare }}" readonly><br>
+
+              
+          </form>
+      </div>
+      
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Website</p>
+      </div>
+    </footer>
+    <script>
+      // Initialize the map
+function initMap() {
+    const mapDiv = document.getElementById("map");
+    const map = new google.maps.Map(mapDiv, {
+        center: { lat: 40.7128, lng: -74.0060 }, // New York City coordinates
+        zoom: 12 // Adjust zoom level as needed
+    });
+
+    // Initialize draggable markers for pickup and dropoff locations
+    const pickupMarker = new google.maps.Marker({
+        position: { lat: 40.7128, lng: -74.0060 }, // Default pickup location (New York City)
+        map: map,
+        draggable: true,
+        title: 'Pickup Location'
+    });
+
+    const dropoffMarker = new google.maps.Marker({
+        position: { lat: 40.7128, lng: -74.0060 }, // Default dropoff location (New York City)
+        map: map,
+        draggable: true,
+        title: 'Dropoff Location'
+    });
+
+    // Event listener for when the pickup marker is dragged
+    pickupMarker.addListener('dragend', function(event) {
+        document.getElementById('pickup_latitude').value = event.latLng.lat();
+        document.getElementById('pickup_longitude').value = event.latLng.lng();
+    });
+
+    // Event listener for when the dropoff marker is dragged
+    dropoffMarker.addListener('dragend', function(event) {
+        document.getElementById('dropoff_latitude').value = event.latLng.lat();
+        document.getElementById('dropoff_longitude').value = event.latLng.lng();
+    });
+}
+
+// Load the Google Maps API script
+function loadMapScript() {
+    const script = document.createElement("script");
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyApb69fNQll1kFrfUP-xTIrrOC6xz2MDxA&callback=initMap";
+    script.defer = true;
+    document.head.appendChild(script);
+}
+
+// Call the function to load the Google Maps API
+loadMapScript();
+
+
+
+    </script>
+  </body>
+</html>
