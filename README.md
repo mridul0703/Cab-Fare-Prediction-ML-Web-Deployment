@@ -28,27 +28,40 @@ Our Cab Fare Prediction Web Application utilizes machine learning algorithms to 
 
 To run the Cab Fare Prediction Web Application locally, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mridul0703/Cab-Fare-Prediction-Deployment.git
-   ```
+1. **Download the Code:**
+   - Clone the repository using Git:
+     ```bash
+     git clone https://github.com/your-username/cab-fare-prediction.git
+     ```
+   - Alternatively, you can download the code as a ZIP file and extract it to your desired location.
 
-2. Navigate to the project directory:
-   ```bash
-   cd cab-fare-prediction
-   ```
+2. **Navigate to the Project Directory:**
+   - Open a terminal or command prompt.
+   - Change directory to the project directory:
+     ```bash
+     cd cab-fare-prediction
+     ```
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. **Install Required Libraries:**
+   - Make sure you have Python installed on your machine.
+   - Use `pip` to install the required libraries from the `requirements.txt` file:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - This will install Flask, pandas, numpy, scikit-learn, gunicorn, requests, and any other dependencies specified in the file.
 
-4. Start the web server:
-   ```bash
-   python app.py
-   ```
+4. **Start the Web Server:**
+   - Run the Flask application using the following command:
+     ```bash
+     python app.py
+     ```
+   - This will start the web server.
 
-5. Open your preferred web browser and go to http://localhost:5000.
+5. **Access the Application:**
+   - Open your preferred web browser and go to http://localhost:5000.
+
+6. **Use the Application:**
+   - Input ride details, view predicted fares, and utilize the map integration for real-time estimations.
 
 ## Usage
 
